@@ -3,7 +3,7 @@
 <h1>Name : <%= @users.first.name %></h1>
 
 <br>
-<%= image_tag @users.first.profilePic_url.to_s %>
+<%= image_tag @users.first.avatar %>
 <br>
 
 <p>Education : <%= @users.first.education %></p>
@@ -17,12 +17,15 @@
 <br>
 <%= link_to 'Edit', edit_user_path(@users.first) %>
 <br><br>
-<%= link_to 'New Status update', new_status_update_path %>
-<br>
 
+<h1>Status </h1>
 
 <% @status.each do |status_update| %>
   <%= status_update.content %>
+  <%= link_to 'Destroy', status_update, method: :delete, data: { confirm: 'Are you sure?' } %>
   <br>
   <hr>
 <% end %>
+<br><br>
+<%= link_to 'New Status update', new_status_update_path %>
+<br>

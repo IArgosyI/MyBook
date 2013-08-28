@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130827102557) do
+ActiveRecord::Schema.define(version: 20130828182352) do
 
   create_table "status_updates", force: true do |t|
     t.string   "content"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20130827102557) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "profilePic"
+    t.string   "avatar"
   end
 
 end
