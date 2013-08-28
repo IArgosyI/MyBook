@@ -6,6 +6,11 @@
 </p>
 
 <p>
+  <strong>ProfilePic</strong>
+  <%= image_tag @user.profilePic_url.to_s %>
+</p>
+
+<p>
   <strong>Education:</strong>
   <%= @user.education %>
 </p>

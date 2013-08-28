@@ -4,6 +4,7 @@ class StatusUpdatesController < ApplicationController
   # GET /status_updates
   # GET /status_updates.json
   def index
+    @users = User.all
     @status_updates = StatusUpdate.all
   end
 
